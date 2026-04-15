@@ -330,7 +330,7 @@ const LandingPage: React.FC = () => {
             >
               {/* Image */}
               <div className="h-48 bg-orange-50 overflow-hidden relative">
-                <img
+                <Image
                   src={product.image}
                   alt={product.name}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
@@ -375,7 +375,7 @@ const LandingPage: React.FC = () => {
               className="relative"
             >
               <div className="rounded-3xl overflow-hidden shadow-lg">
-                <img
+                <Image
                   src="/images/all.jpeg"
                   alt="Camilan Nusantara"
                   className="w-full h-[400px] object-cover"
