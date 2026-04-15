@@ -44,7 +44,7 @@ export const products: Product[] = [
     id: 5,
     name: "Putri Salju",
     category: "kue",
-    image: "/images/kueSalju.jpg",
+    image: "/images/kuesalju.jpg",
     description: "Kue kering lembut dengan taburan gula halus seperti salju",
     price: "Rp 50.000",
   },
