@@ -21,7 +21,7 @@ const Footer = () => {
                 />
               </div>
               <div>
-                <h3 className="text-lg font-semibold">Camilan Nusantara</h3>
+                <h3 className="text-lg font-semibold">Camilan Mama Alfi</h3>
                 <p className="text-gray-400 text-sm">
                   Premium Snacks & Cookies
                 </p>

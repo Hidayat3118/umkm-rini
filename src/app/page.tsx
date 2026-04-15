@@ -13,12 +13,13 @@ import {
   TrendingUp,
   Sparkles,
 } from "lucide-react";
+import { ShoppingCart } from "lucide-react";
 import { Users, BadgeCheck } from "lucide-react";
 import { products } from "./data/dataProduk";
 import Image from "next/image";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-
+import { bukaWa } from "@/utils/bukaWa";
 const LandingPage: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<string>("all");
 
@@ -30,57 +31,93 @@ const LandingPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-yellow-50 bg-red-500">
       {/* Header/Navbar */}
-      <Navbar />
+      <Navbar data-aos='fade-up'/>
 
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-4 py-10 md:py-12 lg:py-24">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
           {/* LEFT */}
           <div className="flex-1 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 bg-orange-50 px-4 py-2 rounded-full mb-6 border border-orange-100">
+            <div
+              data-aos="fade-down"
+              data-aos-duration="600"
+              className="inline-flex items-center gap-2 bg-orange-50 px-4 py-2 rounded-full mb-6 border border-orange-100"
+            >
               <Sparkles className="text-orange-500" size={16} />
               <span className="text-sm font-semibold text-orange-600">
                 Dibuat Fresh Setiap Hari
               </span>
             </div>
 
-            <h1 className="text-2xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-5 leading-tight tracking-tight">
+            <h1
+              data-aos="fade-up"
+              data-aos-duration="700"
+              data-aos-delay="100"
+              className="text-2xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-5 leading-tight tracking-tight"
+            >
               Camilan Terbaik
               <span className="text-orange-500 block">Untuk Keluarga Anda</span>
             </h1>
 
-            <p className="text-lg text-gray-600 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+            <p
+              data-aos="fade-up"
+              data-aos-duration="700"
+              data-aos-delay="200"
+              className="text-lg text-gray-600 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed"
+            >
               Nikmati keripik renyah & kue premium dengan resep tradisional yang
               sudah dipercaya banyak pelanggan.
             </p>
 
-            <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-              <a className="bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-orange-600 transition shadow-sm hover:shadow-md">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="700"
+              data-aos-delay="300"
+              className="flex flex-wrap gap-4 justify-center lg:justify-start"
+            >
+              <button className="bg-orange-500 cursor-pointer text-white px-6 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-orange-600 transition shadow-sm hover:shadow-md">
                 <ShoppingBag size={20} />
-                Lihat Produk
-              </a>
-
-              <a className="border border-orange-500 text-orange-600 px-6 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-orange-50 transition">
+                <p>Lihat Produk</p>
+              </button>
+              <button
+                onClick={bukaWa}
+                className="border cursor-pointer border-orange-500 text-orange-600 px-6 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-orange-50 transition"
+              >
                 <Phone size={20} />
                 Hubungi
-              </a>
+              </button>
             </div>
 
             {/* Stats */}
             <div className="flex gap-10 mt-12 justify-center lg:justify-start text-center">
-              <div className="flex flex-col items-center gap-1">
+              <div
+                data-aos="zoom-in"
+                data-aos-duration="500"
+                data-aos-delay="400"
+                className="flex flex-col items-center gap-1"
+              >
                 <Users className="text-orange-500" size={22} />
-                <div className="text-2xl font-bold text-orange-500">500+</div>
+                <div className="text-2xl font-bold text-orange-500">100+</div>
                 <div className="text-xs text-gray-500">Pelanggan</div>
               </div>
 
-              <div className="flex flex-col items-center gap-1">
+              <div
+                data-aos="zoom-in"
+                data-aos-duration="500"
+                data-aos-delay="500"
+                className="flex flex-col items-center gap-1"
+              >
                 <Package className="text-orange-500" size={22} />
                 <div className="text-2xl font-bold text-orange-500">8</div>
                 <div className="text-xs text-gray-500">Produk</div>
               </div>
 
-              <div className="flex flex-col items-center gap-1">
+              <div
+                data-aos="zoom-in"
+                data-aos-duration="500"
+                data-aos-delay="600"
+                className="flex flex-col items-center gap-1"
+              >
                 <BadgeCheck className="text-green-500" size={22} />
                 <div className="text-2xl font-bold text-green-500">100%</div>
                 <div className="text-xs text-gray-500">Halal & Fresh</div>
@@ -89,13 +126,23 @@ const LandingPage: React.FC = () => {
           </div>
 
           {/* RIGHT */}
-          <div className="flex-1 relative">
+          <div
+            data-aos="fade-left"
+            data-aos-duration="800"
+            data-aos-delay="200"
+            className="flex-1 relative"
+          >
             {/* background blur */}
             <div className="absolute inset-0 rounded-3xl blur-3xl opacity-30"></div>
 
             <div className="relative backdrop-blur-sm p-4">
               <div className="grid grid-cols-2 gap-4">
-                <div className="relative h-40 md:h-56 rounded-2xl overflow-hidden group">
+                <div
+                  data-aos="zoom-in"
+                  data-aos-duration="600"
+                  data-aos-delay="300"
+                  className="relative h-40 md:h-56 rounded-2xl overflow-hidden group"
+                >
                   <Image
                     src="/images/cemilan.jpeg"
                     alt="produk"
@@ -105,7 +152,13 @@ const LandingPage: React.FC = () => {
                   />
                   <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition" />
                 </div>
-                <div className="relative h-40 md:h-56 rounded-2xl overflow-hidden group">
+
+                <div
+                  data-aos="zoom-in"
+                  data-aos-duration="600"
+                  data-aos-delay="400"
+                  className="relative h-40 md:h-56 rounded-2xl overflow-hidden group"
+                >
                   <Image
                     src="/images/kue.jpeg"
                     alt="produk"
@@ -115,7 +168,13 @@ const LandingPage: React.FC = () => {
                   />
                   <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition" />
                 </div>
-                <div className="relative h-40 md:h-56 rounded-2xl overflow-hidden group">
+
+                <div
+                  data-aos="zoom-in"
+                  data-aos-duration="600"
+                  data-aos-delay="500"
+                  className="relative h-40 md:h-56 rounded-2xl overflow-hidden group"
+                >
                   <Image
                     src="/images/kueRingan.jpeg"
                     alt="produk"
@@ -125,7 +184,13 @@ const LandingPage: React.FC = () => {
                   />
                   <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition" />
                 </div>
-                <div className="relative h-40 md:h-56 rounded-2xl overflow-hidden group">
+
+                <div
+                  data-aos="zoom-in"
+                  data-aos-duration="600"
+                  data-aos-delay="600"
+                  className="relative h-40 md:h-56 rounded-2xl overflow-hidden group"
+                >
                   <Image
                     src="/images/kueBasah.jpeg"
                     alt="produk"
@@ -142,51 +207,60 @@ const LandingPage: React.FC = () => {
       </section>
 
       {/* Features */}
-      <section className="bg-white  border-y border-orange-100">
+      <section className="bg-white border-y border-orange-100">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* ITEM */}
-            <div className=" md:p-7 rounded-2xl bg-white border border-gray-100 hover:shadow-lg transition group text-center">
+            {/* ITEM 1 */}
+            <div
+              data-aos="fade-up"
+              data-aos-duration="600"
+              data-aos-delay="100"
+              className="md:p-7 rounded-2xl bg-white border border-gray-100 hover:shadow-lg transition group text-center"
+            >
               <div className="w-16 h-16 rounded-2xl bg-orange-50 flex items-center justify-center mx-auto mb-5 group-hover:bg-orange-100 transition">
                 <Award className="text-orange-500" size={28} />
               </div>
-
               <h3 className="font-semibold text-xl text-gray-800 mb-2">
                 Kualitas Terjamin
               </h3>
-
               <p className="text-sm text-gray-500 leading-relaxed max-w-xs mx-auto">
                 Menggunakan bahan premium pilihan dengan proses higienis dan
                 standar kualitas tinggi untuk hasil terbaik.
               </p>
             </div>
 
-            {/* ITEM */}
-            <div className=" md:p-7 rounded-2xl bg-white border border-gray-100 hover:shadow-lg transition group text-center">
+            {/* ITEM 2 */}
+            <div
+              data-aos="fade-up"
+              data-aos-duration="600"
+              data-aos-delay="200"
+              className="md:p-7 rounded-2xl bg-white border border-gray-100 hover:shadow-lg transition group text-center"
+            >
               <div className="w-16 h-16 rounded-2xl bg-orange-50 flex items-center justify-center mx-auto mb-5 group-hover:bg-orange-100 transition">
                 <Zap className="text-orange-500" size={28} />
               </div>
-
               <h3 className="font-semibold text-xl text-gray-800 mb-2">
                 Selalu Fresh
               </h3>
-
               <p className="text-sm text-gray-500 leading-relaxed max-w-xs mx-auto">
                 Diproduksi setiap hari dalam jumlah terbatas untuk menjaga rasa,
                 tekstur, dan kualitas tetap maksimal.
               </p>
             </div>
 
-            {/* ITEM */}
-            <div className=" md:p-7 rounded-2xl bg-white border border-gray-100 hover:shadow-lg transition group text-center">
+            {/* ITEM 3 */}
+            <div
+              data-aos="fade-up"
+              data-aos-duration="600"
+              data-aos-delay="300"
+              className="md:p-7 rounded-2xl bg-white border border-gray-100 hover:shadow-lg transition group text-center"
+            >
               <div className="w-16 h-16 rounded-2xl bg-green-50 flex items-center justify-center mx-auto mb-5 group-hover:bg-green-100 transition">
                 <Heart className="text-green-500" size={28} />
               </div>
-
               <h3 className="font-semibold text-xl text-gray-800 mb-2">
                 Harga Bersahabat
               </h3>
-
               <p className="text-sm text-gray-500 leading-relaxed max-w-xs mx-auto">
                 Harga terjangkau dengan kualitas premium, cocok untuk camilan
                 keluarga maupun oleh-oleh spesial.
@@ -197,95 +271,93 @@ const LandingPage: React.FC = () => {
       </section>
 
       {/* Products Section */}
-      <section id="products" className="max-w-7xl mx-auto px-4 py-20">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-100 to-yellow-100 px-5 py-2 rounded-full mb-4 border border-orange-200">
-            <Package className="text-orange-500" size={18} />
-            <span className="text-sm font-bold text-orange-700">
-              Produk Pilihan
+      <section id="products" className="max-w-7xl mx-auto px-4 py-16">
+        {/* Header */}
+        <div
+          data-aos="fade-up"
+          data-aos-duration="600"
+          className="text-center mb-14"
+        >
+          <span className="inline-block flex px-4 py-2 text-sm font-semibold text-orange-600 bg-orange-100 rounded-full mb-4">
+            <span className="flex gap-2 items-center">
+              <Sparkles className="text-orange-500" size={16} />
+              <p>Produk Pilihan</p>
             </span>
-          </div>
-          <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-4">
+          </span>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
             Produk Kami
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Berbagai pilihan camilan lezat untuk setiap momen spesial Anda
+          <p className="text-gray-500 max-w-xl mx-auto">
+            Berbagai pilihan camilan lezat untuk menemani setiap momen Anda
           </p>
         </div>
 
-        {/* Filter Buttons */}
-        <div className="flex justify-center gap-4 mb-12 flex-wrap">
-          <button
-            onClick={() => setActiveCategory("all")}
-            className={`px-8 py-3 rounded-full font-bold text-lg transition-all shadow-md ${
-              activeCategory === "all"
-                ? "bg-gradient-to-r from-orange-500 to-yellow-500 text-white shadow-xl scale-105"
-                : "bg-white text-gray-700 hover:shadow-lg hover:scale-105"
-            }`}
-          >
-            Semua Produk
-          </button>
-          <button
-            onClick={() => setActiveCategory("keripik")}
-            className={`px-8 py-3 rounded-full font-bold text-lg transition-all shadow-md ${
-              activeCategory === "keripik"
-                ? "bg-gradient-to-r from-orange-500 to-yellow-500 text-white shadow-xl scale-105"
-                : "bg-white text-gray-700 hover:shadow-lg hover:scale-105"
-            }`}
-          >
-            Keripik
-          </button>
-          <button
-            onClick={() => setActiveCategory("kue")}
-            className={`px-8 py-3 rounded-full font-bold text-lg transition-all shadow-md ${
-              activeCategory === "kue"
-                ? "bg-gradient-to-r from-orange-500 to-yellow-500 text-white shadow-xl scale-105"
-                : "bg-white text-gray-700 hover:shadow-lg hover:scale-105"
-            }`}
-          >
-            Kue Kering
-          </button>
+        {/* Filter */}
+        <div
+          data-aos="fade-up"
+          data-aos-duration="500"
+          data-aos-delay="100"
+          className="flex justify-center gap-3 mb-12 flex-wrap"
+        >
+          {["all", "keripik", "kue"].map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActiveCategory(cat)}
+              className={`px-6 py-2 rounded-full text-sm font-semibold transition-all ${
+                activeCategory === cat
+                  ? "bg-orange-500 text-white shadow-md"
+                  : "bg-gray-100 text-gray-600 hover:bg-orange-100"
+              }`}
+            >
+              {cat === "all"
+                ? "Semua"
+                : cat === "keripik"
+                  ? "Keripik"
+                  : "Kue Kering"}
+            </button>
+          ))}
         </div>
 
-        {/* Product Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {filteredProducts.map((product) => (
+        {/* Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {filteredProducts.map((product, index) => (
             <div
               key={product.id}
-              className="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all transform hover:-translate-y-2 group"
+              data-aos="fade-up"
+              data-aos-duration="500"
+              data-aos-delay={index * 100}
+              className="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden"
             >
-              <div className="h-56 bg-gradient-to-br from-orange-100 to-yellow-100 flex items-center justify-center text-8xl relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-t from-orange-200/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                <span className="relative z-10 group-hover:scale-110 transition-transform">
-                  {product.image}
-                </span>
+              {/* Image */}
+              <div className="h-48 bg-orange-50 overflow-hidden relative">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all"></div>
               </div>
-              <div className="p-6">
-                <h3 className="font-black text-xl mb-2 text-gray-800">
+
+              {/* Content */}
+              <div className="p-5">
+                <h3 className="font-bold text-lg text-gray-800 mb-1">
                   {product.name}
                 </h3>
-                <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+                <p className="text-sm text-gray-500 mb-3 line-clamp-2">
                   {product.description}
                 </p>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-2xl font-black text-orange-600">
+                  <span className="text-lg font-bold text-orange-600">
                     {product.price}
                   </span>
-                  <div className="flex items-center gap-1 text-yellow-500">
-                    <Star className="fill-current" size={16} />
-                    <Star className="fill-current" size={16} />
-                    <Star className="fill-current" size={16} />
-                    <Star className="fill-current" size={16} />
-                    <Star className="fill-current" size={16} />
-                  </div>
                 </div>
-                <a
-                  href="#contact"
-                  className="block text-center bg-gradient-to-r from-orange-500 to-yellow-500 text-white py-3 rounded-xl hover:shadow-xl transition-all font-bold flex items-center justify-center gap-2 group-hover:scale-105"
+                <button
+                  onClick={bukaWa}
+                  className="w-full flex items-center justify-center gap-2 cursor-pointer bg-orange-500 text-white py-2.5 rounded-lg text-sm font-semibold hover:bg-orange-600 transition-all hover:scale-[1.02] active:scale-95"
                 >
-                  <ShoppingBag size={20} />
+                  <ShoppingCart size={18} />
                   Pesan Sekarang
-                </a>
+                </button>
               </div>
             </div>
           ))}
@@ -293,57 +365,114 @@ const LandingPage: React.FC = () => {
       </section>
 
       {/* About Section */}
-      <section
-        id="about"
-        className="bg-gradient-to-br from-orange-50 to-yellow-50 py-20 border-y-2 border-orange-100"
-      >
+      <section id="about" className="py-8 md:py-20 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <div className="inline-flex bg-gradient-to-r from-orange-400 to-yellow-400 p-4 rounded-2xl mb-6 shadow-lg">
-                <Star className="text-white" size={48} />
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* LEFT - IMAGE */}
+            <div
+              data-aos="fade-right"
+              data-aos-duration="700"
+              className="relative"
+            >
+              <div className="rounded-3xl overflow-hidden shadow-lg">
+                <img
+                  src="/images/all.jpeg"
+                  alt="Camilan Nusantara"
+                  className="w-full h-[400px] object-cover"
+                />
               </div>
-              <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">
-                Tentang Kami
-              </h2>
+
+              {/* floating badge */}
+              <div
+                data-aos="zoom-in"
+                data-aos-duration="500"
+                data-aos-delay="400"
+                className="absolute -bottom-6 -left-6 bg-orange-500 text-white px-6 py-3 rounded-xl shadow-lg"
+              >
+                <p className="text-sm">Sejak 2015</p>
+                <p className="font-bold text-base md:text-lg">UMKM Lokal</p>
+              </div>
             </div>
 
-            <div className="bg-white rounded-3xl p-10 shadow-xl">
-              <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                <strong className="text-orange-600">Camilan Nusantara</strong>{" "}
-                adalah UMKM lokal yang berkomitmen menghadirkan camilan
-                tradisional Indonesia dengan cita rasa autentik dan kualitas
-                terbaik. Setiap produk dibuat dengan penuh perhatian menggunakan
-                resep turun temurun yang telah terbukti kelezatannya selama
-                puluhan tahun.
+            {/* RIGHT - CONTENT */}
+            <div>
+              <span
+                data-aos="fade-up"
+                data-aos-duration="500"
+                className="inline-block text-sm font-semibold text-orange-600 bg-orange-100 px-4 py-2 rounded-full mb-4"
+              >
+                Tentang Kami
+              </span>
+
+              <h2
+                data-aos="fade-up"
+                data-aos-duration="600"
+                data-aos-delay="100"
+                className="text-2xl md:text-4xl font-extrabold text-gray-900 mb-6 leading-tight"
+              >
+                Camilan Tradisional dengan Rasa Autentik
+              </h2>
+
+              <p
+                data-aos="fade-up"
+                data-aos-duration="600"
+                data-aos-delay="200"
+                className="text-gray-600 mb-4 leading-relaxed"
+              >
+                <strong className="text-orange-600">Camilan Mama Alfi</strong>{" "}
+                adalah UMKM lokal yang menghadirkan camilan tradisional
+                Indonesia dengan kualitas terbaik dan cita rasa khas rumahan.
               </p>
-              <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                Kami menggunakan bahan-bahan pilihan berkualitas tinggi dan
-                proses produksi yang higienis untuk memastikan setiap gigitan
-                memberikan kepuasan maksimal. Dari keripik yang super renyah
-                hingga kue kering yang lembut dan lumer di mulut, semua dibuat
-                fresh setiap hari khusus untuk Anda.
+
+              <p
+                data-aos="fade-up"
+                data-aos-duration="600"
+                data-aos-delay="300"
+                className="text-gray-600 mb-8 leading-relaxed"
+              >
+                Kami menggunakan bahan pilihan dan proses higienis untuk
+                memastikan setiap produk fresh, renyah, dan memuaskan di setiap
+                gigitan.
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-yellow-50 rounded-2xl">
-                  <TrendingUp
-                    className="text-orange-500 mx-auto mb-3"
-                    size={40}
-                  />
-                  <div className="font-bold text-gray-800">
-                    Berkembang Sejak 2015
+
+              {/* STATS */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div
+                  data-aos="zoom-in"
+                  data-aos-duration="500"
+                  data-aos-delay="300"
+                  className="flex items-center justify-center gap-3 p-4 border rounded-xl hover:shadow-sm transition"
+                >
+                  <TrendingUp className="text-orange-500" size={24} />
+                  <div>
+                    <p className="text-sm text-gray-500">Pengalaman</p>
+                    <p className="font-semibold text-gray-800">Sejak 2015</p>
                   </div>
                 </div>
-                <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-yellow-50 rounded-2xl">
-                  <Award className="text-orange-500 mx-auto mb-3" size={40} />
-                  <div className="font-bold text-gray-800">
-                    Sertifikat Halal MUI
+
+                <div
+                  data-aos="zoom-in"
+                  data-aos-duration="500"
+                  data-aos-delay="400"
+                  className="flex items-center justify-center gap-3 p-4 border rounded-xl hover:shadow-sm transition"
+                >
+                  <Award className="text-orange-500" size={24} />
+                  <div>
+                    <p className="text-sm text-gray-500">Legalitas</p>
+                    <p className="font-semibold text-gray-800">Halal MUI</p>
                   </div>
                 </div>
-                <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-yellow-50 rounded-2xl">
-                  <Heart className="text-orange-500 mx-auto mb-3" size={40} />
-                  <div className="font-bold text-gray-800">
-                    Ribuan Pelanggan Setia
+
+                <div
+                  data-aos="zoom-in"
+                  data-aos-duration="500"
+                  data-aos-delay="500"
+                  className="flex items-center justify-center gap-3 p-4 border rounded-xl hover:shadow-sm transition"
+                >
+                  <Heart className="text-orange-500" size={24} />
+                  <div>
+                    <p className="text-sm text-gray-500">Pelanggan</p>
+                    <p className="font-semibold text-gray-800">100+ Loyal</p>
                   </div>
                 </div>
               </div>
@@ -353,91 +482,111 @@ const LandingPage: React.FC = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="max-w-7xl mx-auto px-4 py-20">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-4">
-            Hubungi Kami
-          </h2>
-          <p className="text-xl text-gray-600">
-            Siap melayani pesanan dan pertanyaan Anda dengan ramah
-          </p>
-        </div>
+      <section id="contact" className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          {/* Header */}
+          <div
+            data-aos="fade-up"
+            data-aos-duration="600"
+            className="text-center mb-14"
+          >
+            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
+              Hubungi Kami
+            </h2>
+            <p className="text-gray-500 max-w-xl mx-auto">
+              Siap melayani pesanan dan pertanyaan Anda dengan cepat dan ramah
+            </p>
+          </div>
 
-        <div className="max-w-3xl mx-auto">
-          <div className="bg-white rounded-3xl shadow-2xl p-10">
-            <div className="space-y-6">
-              <a
-                href="https://wa.me/6281234567890"
-                className="flex items-center gap-6 p-6 rounded-2xl bg-gradient-to-r from-green-50 to-green-100 hover:shadow-lg transition-all group border-2 border-green-200"
+          <div className="max-w-3xl mx-auto">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="600"
+              data-aos-delay="100"
+              className="bg-white rounded-2xl shadow-sm border p-6 space-y-4"
+            >
+              {/* WhatsApp */}
+              <button
+                onClick={bukaWa}
+                data-aos="fade-up"
+                data-aos-duration="500"
+                data-aos-delay="200"
+                className="flex cursor-pointer w-full items-center justify-between p-5 rounded-xl border hover:shadow-md transition group"
               >
-                <div className="bg-gradient-to-br from-green-500 to-green-600 p-4 rounded-2xl group-hover:scale-110 transition-transform shadow-md">
-                  <Phone className="text-white" size={32} />
+                <div className="flex items-center gap-4">
+                  <div className="bg-green-500 p-3 rounded-lg">
+                    <Phone className="text-white" size={22} />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-gray-800">WhatsApp</p>
+                    <p className="text-sm text-gray-500">0853-4977-0174</p>
+                  </div>
                 </div>
-                <div className="flex-1">
-                  <h3 className="font-black text-xl mb-1 text-gray-800">
-                    WhatsApp
-                  </h3>
-                  <p className="text-green-600 font-bold text-lg">
-                    +62 812-3456-7890
-                  </p>
-                  <p className="text-sm text-gray-600">
-                    Klik untuk chat langsung
-                  </p>
+                <span className="text-green-500 text-sm font-semibold">
+                  Chat →
+                </span>
+              </button>
+
+              {/* Instagram */}
+              <a
+                href="https://www.instagram.com/rini__cookies/"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-aos="fade-up"
+                data-aos-duration="500"
+                data-aos-delay="300"
+                className="flex items-center justify-between p-5 rounded-xl border hover:shadow-md transition group"
+              >
+                <div className="flex items-center gap-4">
+                  <div className="bg-pink-500 p-3 rounded-lg">
+                    <Instagram className="text-white" size={22} />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-gray-800">Instagram</p>
+                    <p className="text-sm text-gray-500">@camilannusantara</p>
+                  </div>
                 </div>
-                <div className="text-green-600">
-                  <TrendingUp size={28} />
-                </div>
+                <span className="text-pink-500 text-sm font-semibold">
+                  Kunjungi →
+                </span>
               </a>
 
-              <a
-                href="https://instagram.com/camilannusantara"
-                className="flex items-center gap-6 p-6 rounded-2xl bg-gradient-to-r from-pink-50 to-purple-100 hover:shadow-lg transition-all group border-2 border-pink-200"
+              {/* Lokasi */}
+              <div
+                data-aos="fade-up"
+                data-aos-duration="500"
+                data-aos-delay="400"
+                className="flex items-center gap-4 p-5 rounded-xl border"
               >
-                <div className="bg-gradient-to-br from-pink-500 to-purple-600 p-4 rounded-2xl group-hover:scale-110 transition-transform shadow-md">
-                  <Instagram className="text-white" size={32} />
+                <div className="bg-orange-500 p-3 rounded-lg">
+                  <MapPin className="text-white" size={22} />
                 </div>
-                <div className="flex-1">
-                  <h3 className="font-black text-xl mb-1 text-gray-800">
-                    Instagram
-                  </h3>
-                  <p className="text-pink-600 font-bold text-lg">
-                    @camilannusantara
-                  </p>
-                  <p className="text-sm text-gray-600">
-                    Follow untuk update produk
-                  </p>
-                </div>
-                <div className="text-pink-600">
-                  <Sparkles size={28} />
-                </div>
-              </a>
-
-              <div className="flex items-center gap-6 p-6 rounded-2xl bg-gradient-to-r from-orange-50 to-yellow-100 border-2 border-orange-200">
-                <div className="bg-gradient-to-br from-orange-500 to-yellow-500 p-4 rounded-2xl shadow-md">
-                  <MapPin className="text-white" size={32} />
-                </div>
-                <div className="flex-1">
-                  <h3 className="font-black text-xl mb-1 text-gray-800">
-                    Lokasi Kami
-                  </h3>
-                  <p className="text-orange-600 font-bold text-lg">
-                    Banjarmasin, Kalimantan Selatan
-                  </p>
-                  <p className="text-sm text-gray-600">
-                    Siap kirim ke seluruh Indonesia
+                <div>
+                  <p className="font-semibold text-gray-800">Lokasi</p>
+                  <p className="text-sm text-gray-500">
+                    Handil Bakti, Kec. Alalak, Komplek Griya Permata, Kalimantan
+                    Selatan
                   </p>
                 </div>
               </div>
-            </div>
 
-            <div className="mt-8 pt-8 border-t-2 border-gray-100">
-              <a
-                href="https://wa.me/6281234567890"
-                className="block w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-5 rounded-2xl hover:shadow-2xl transition-all font-black text-xl text-center hover:scale-105 flex items-center justify-center gap-3"
+              {/* CTA */}
+              <div
+                data-aos="zoom-in"
+                data-aos-duration="500"
+                data-aos-delay="500"
+                className="pt-6"
               >
-                <Phone size={28} />
-                Chat WhatsApp Sekarang
-              </a>
+                <a
+                  href="https://wa.me/6285349770174"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full bg-green-500 text-white py-4 rounded-xl text-center font-semibold hover:bg-green-600 transition hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2"
+                >
+                  <Phone size={20} />
+                  Chat WhatsApp Sekarang
+                </a>
+              </div>
             </div>
           </div>
         </div>
