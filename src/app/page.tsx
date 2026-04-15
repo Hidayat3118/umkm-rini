@@ -35,7 +35,7 @@ const LandingPage: React.FC = () => {
       <Navbar data-aos='fade-up'/>
 
       {/* Hero Section */}
-      <section className="max-w-7xl mx-auto px-4 py-10 md:py-12 lg:py-24">
+      <section className="max-w-7xl mx-auto px-4 py-10 md:py-12 lg:py-24 mt-14 md:mt-8">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
           {/* LEFT */}
           <div className="flex-1 text-center lg:text-left">
