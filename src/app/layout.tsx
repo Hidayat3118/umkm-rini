@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Camilan Nusantara",
+  title: "Rini Cookies",
   description: "Camilan tradisional dengan cita rasa autentik",
 };
 

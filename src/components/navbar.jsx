@@ -34,10 +34,10 @@ const Navbar = () => {
             </div>
             <div>
               <h1 className="text-sm md:text-lg font-semibold text-stone-800 leading-tight">
-                Camilan Mama Alfi
+                Rini Cookies
               </h1>
               <p className="text-[9px] md:text-xs text-amber-800/70 uppercase tracking-widest">
-                Premium Snacks & Cookies
+                Snacks & Cookies
               </p>
             </div>
           </div>
