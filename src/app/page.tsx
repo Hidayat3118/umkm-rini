@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { Leaf } from "lucide-react";
 import {
   ShoppingBag,
   Phone,
@@ -215,7 +216,7 @@ const LandingPage: React.FC = () => {
               data-aos="fade-up"
               data-aos-duration="600"
               data-aos-delay="100"
-              className="md:p-7 rounded-2xl bg-white border border-gray-100 hover:shadow-lg transition group text-center"
+              className="md:p-7 rounded-2xl py-4 bg-white border border-gray-100 hover:shadow-lg transition group text-center"
             >
               <div className="w-16 h-16 rounded-2xl bg-orange-50 flex items-center justify-center mx-auto mb-5 group-hover:bg-orange-100 transition">
                 <Award className="text-orange-500" size={28} />
@@ -234,10 +235,10 @@ const LandingPage: React.FC = () => {
               data-aos="fade-up"
               data-aos-duration="600"
               data-aos-delay="200"
-              className="md:p-7 rounded-2xl bg-white border border-gray-100 hover:shadow-lg transition group text-center"
+              className="md:p-7 rounded-2xl py-4 bg-white border border-gray-100 hover:shadow-lg transition group text-center"
             >
-              <div className="w-16 h-16 rounded-2xl bg-orange-50 flex items-center justify-center mx-auto mb-5 group-hover:bg-orange-100 transition">
-                <Zap className="text-orange-500" size={28} />
+              <div className="w-16 h-16 rounded-2xl bg-green-50 flex items-center justify-center mx-auto mb-5 group-hover:bg-green-100 transition">
+                <Leaf className="text-green-500" size={28} />
               </div>
               <h3 className="font-semibold text-xl text-gray-800 mb-2">
                 Selalu Fresh
@@ -253,7 +254,7 @@ const LandingPage: React.FC = () => {
               data-aos="fade-up"
               data-aos-duration="600"
               data-aos-delay="300"
-              className="md:p-7 rounded-2xl bg-white border border-gray-100 hover:shadow-lg transition group text-center"
+              className="md:p-7 rounded-2xl py-4 bg-white border border-gray-100 hover:shadow-lg transition group text-center"
             >
               <div className="w-16 h-16 rounded-2xl bg-green-50 flex items-center justify-center mx-auto mb-5 group-hover:bg-green-100 transition">
                 <Heart className="text-green-500" size={28} />
