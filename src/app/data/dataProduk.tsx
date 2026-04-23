@@ -22,7 +22,7 @@ export const products: Product[] = [
     category: "keripik",
     image: "/images/keripikjeruk.jpg",
     description: "Keripik pangsit renyah cocok untuk cemilan",
-    price: "Tanya harga", // karena belum ada info
+    price: "Rp 10.000 / 70gr", // karena belum ada info
   },
   {
     id: 3,
