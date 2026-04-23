@@ -53,7 +53,7 @@ export const products: Product[] = [
     name: "Kue Bulu Jadul (ukuran 20)",
     category: "kue",
     image: "/images/bulu-20.jpeg",
-    description: "Kue bulu jadul lembut isi 20 pcs",
+    description: "Kue bulu jadul lembut isi 20 cm",
     price: "Rp 35.000",
   },
   {
@@ -61,7 +61,7 @@ export const products: Product[] = [
     name: "Kue Bulu Jadul (ukuran 12)",
     category: "kue",
     image: "/images/bulu-12.jpeg",
-    description: "Kue bulu jadul lembut isi 12 pcs",
+    description: "Kue bulu jadul lembut isi 12 cm",
     price: "Rp 17.000",
   },
   {
