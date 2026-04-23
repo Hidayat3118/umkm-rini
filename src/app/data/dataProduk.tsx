@@ -2,7 +2,7 @@ interface Product {
   id: number;
   name: string;
   category: string;
-  image: string; 
+  image: string;
   description: string;
   price: string;
 }
@@ -10,66 +10,66 @@ interface Product {
 export const products: Product[] = [
   {
     id: 1,
-    name: "Keripik Usus",
+    name: "Usus Crispy",
     category: "keripik",
     image: "/images/cemilan.jpeg",
-    description: "Keripik usus renyah dengan bumbu spesial yang bikin nagih",
-    price: "Rp 15.000",
+    description: "Usus crispy renyah dengan bumbu gurih",
+    price: "Rp 10.000 / 70gr",
   },
-  // {
-  //   id: 2,
-  //   name: "Kacang Selimut",
-  //   category: "keripik",
-  //   image: "/images/kueRingan.jpeg",
-  //   description: "Kacang dengan balutan tepung crispy, gurih maksimal",
-  //   price: "Rp 18.000",
-  // },
-  // {
-  //   id: 3,
-  //   name: "Nastar",
-  //   category: "kue",
-  //   image: "/images/kueKering.jpeg",
-  //   description: "Kue kering nastar lumer di mulut dengan isian nanas asli",
-  //   price: "Rp 55.000",
-  // },
-  // {
-  //   id: 4,
-  //   name: "Kastangel",
-  //   category: "kue",
-  //   image: "/images/kueKering.jpeg",
-  //   description: "Kue kering keju premium dengan taburan keju melimpah",
-  //   price: "Rp 60.000",
-  // },
   {
-    id: 5,
-    name: "Putri Salju",
+    id: 2,
+    name: "Keripik Pangsit",
+    category: "keripik",
+    image: "/images/keripikjeruk.jpg",
+    description: "Keripik pangsit renyah cocok untuk cemilan",
+    price: "Tanya harga", // karena belum ada info
+  },
+  {
+    id: 3,
+    name: "Kue Kering (Putri Salju)",
     category: "kue",
     image: "/images/kuesalju.jpg",
-    description: "Kue kering lembut dengan taburan gula halus seperti salju",
-    price: "Rp 50.000",
+    description: "Kue kering lembut dengan taburan gula halus",
+    price: "Rp 25.000 / 250gr",
+  },
+  {
+    id: 4,
+    name: "Kue Kering (Kacang Selimut)",
+    category: "kue",
+    image: "/images/kacangSelubung.jpeg",
+    description: "Kue kering kacang renyah dan manis",
+    price: "Rp 25.000 / 250gr",
+  },
+  {
+    id: 5,
+    name: "Kue Kering (Nastar Coklat)",
+    category: "kue",
+    image: "/images/kue2.jpeg",
+    description: "Nastar dengan isian coklat lezat",
+    price: "Rp 25.000 / 250gr",
   },
   {
     id: 6,
-    name: "Kacang Selimut",
+    name: "Kue Bulu Jadul (ukuran 20)",
     category: "kue",
-    image: "/images/kacangSelubung.jpeg",
-    description: "Kacang amor klasik favorit keluarga, renyah dan manis",
-    price: "Rp 45.000",
+    image: "/images/bulu-20.jpeg",
+    description: "Kue bulu jadul lembut isi 20 pcs",
+    price: "Rp 35.000",
   },
   {
     id: 7,
-    name: "Nastar Coklat",
+    name: "Kue Bulu Jadul (ukuran 12)",
     category: "kue",
-    image: "/images/kue2.jpeg",
-    description: "Nastar dengan isian coklat lezat, perpaduan sempurna",
-    price: "Rp 58.000",
+    image: "/images/bulu-12.jpeg",
+    description: "Kue bulu jadul lembut isi 12 pcs",
+    price: "Rp 17.000",
   },
   {
     id: 8,
-    name: "Keripik Pangsit Jeruk Purut",
-    category: "keripik",
-    image: "/images/keripikjeruk.jpg",
-    description: "Keripik pangsit dengan aroma jeruk purut yang segar",
-    price: "Rp 20.000",
+    name: "Kue Ulang Tahun (18 cm)",
+    category: "kue",
+    image: "/images/ultah.jpeg",
+    description: "Kue ulang tahun spesial ukuran 18 cm",
+    price: "Rp 85.000",
   },
 ];

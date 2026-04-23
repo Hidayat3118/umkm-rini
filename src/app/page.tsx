@@ -32,7 +32,7 @@ const LandingPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-yellow-50 bg-red-500">
       {/* Header/Navbar */}
-      <Navbar data-aos='fade-up'/>
+      <Navbar data-aos="fade-up" />
 
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-4 py-10 md:py-12 lg:py-24 mt-14 md:mt-8">
@@ -208,7 +208,7 @@ const LandingPage: React.FC = () => {
       </section>
 
       {/* Features */}
-      <section className="bg-white border-y border-orange-100">
+      <section className="bg-white border-y border-orange-100 py-14">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* ITEM 1 */}
@@ -344,7 +344,7 @@ const LandingPage: React.FC = () => {
                 <h3 className="font-bold text-lg text-gray-800 mb-1">
                   {product.name}
                 </h3>
-                <p className="text-sm text-gray-500 mb-3 line-clamp-2">
+                <p className="text-sm text-gray-500 mb-3 line-clamp-1">
                   {product.description}
                 </p>
                 <div className="flex items-center justify-between mb-4">
@@ -514,7 +514,7 @@ const LandingPage: React.FC = () => {
                 data-aos-delay="200"
                 className="flex cursor-pointer w-full items-center justify-between p-5 rounded-xl border hover:shadow-md transition group"
               >
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-4 text-left">
                   <div className="bg-green-500 p-3 rounded-lg">
                     <Phone className="text-white" size={22} />
                   </div>
@@ -544,7 +544,7 @@ const LandingPage: React.FC = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-gray-800">Instagram</p>
-                    <p className="text-sm text-gray-500">@camilannusantara</p>
+                    <p className="text-sm text-gray-500">@rini__cookies</p>
                   </div>
                 </div>
                 <span className="text-pink-500 text-sm font-semibold">
